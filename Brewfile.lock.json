@@ -5,13 +5,13 @@
         "revision": "3acd40719ab4484b1fc95336d0301f04821611c5"
       },
       "homebrew/cask": {
-        "revision": "64b1ceefb640e6f167369d1293d5049847399e43"
+        "revision": "f84f55565d74fb6525d400ce2ea721fcccebf7a4"
       },
       "homebrew/cask-fonts": {
-        "revision": "04ce9080b9257c5d193fdf5be51db4c31924be10"
+        "revision": "dc9c3a29a400818bdf66633f84dbff2de16b2517"
       },
       "homebrew/core": {
-        "revision": "c874a9af7be8d65512416eda8a5e8006ea3573d5"
+        "revision": "6af596994fe668c1e21c2f78bd65b3b03381eecb"
       },
       "homebrew/services": {
         "revision": "ee0391aa26c451232d52419dfe349634341231aa"
@@ -2828,13 +2828,14 @@
       "ms-vscode.remote-explorer": null,
       "rokoroku.vscode-theme-darcula": null,
       "ms-vscode-remote.remote-ssh-edit": null,
-      "ms-vscode.remote-server": null
+      "ms-vscode.remote-server": null,
+      "steoates.autoimport": null
     }
   },
   "system": {
     "macos": {
       "ventura": {
-        "HOMEBREW_VERSION": "4.1.3",
+        "HOMEBREW_VERSION": "4.1.4",
         "HOMEBREW_PREFIX": "/usr/local",
         "Homebrew/homebrew-core": "api",
         "CLT": "14.3.1.0.1.1683849156",

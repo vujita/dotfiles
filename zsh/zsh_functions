@@ -29,3 +29,13 @@ enableCorepackPnpm(){
 pnpmInstall(){
   pnpm i --frozen-lockfile
 }
+gfr(){
+  gfa
+  gpr
+}
+dotfiles_mod(){
+  sh -c "cd $DOTFILES_DIR && nvim ."
+  . ~/.zshrc
+}
+
+
