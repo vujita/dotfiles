@@ -1,0 +1,175 @@
+#!/bin/zsh
+export ZPLUG_HOME=~/.zplug
+[ -f $ZPLUG_HOME/init.zsh ] && source $ZPLUG_HOME/init.zsh
+mkdir -p ~/.nvm
+export NVM_DIR=~/.nvm
+set -o allexport
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.zshrc-mac ] && source ~/.zshrc-mac
+
+export PATH="$HOME/.tmuxifier/bin:$PATH"
+export set EDITOR=nvim
+export set CODE_DIRECTORY="${HOME}/code"
+export set DOTFILES_DIR="${CODE_DIRECTORY}/dotfiles"
+export set NOTES_DIR="${CODE_DIRECTORY}/notes"
+[ -f ~/.env ] && source ~/.env
+
+alias so="source ~/.zshrc"
+
+
+gch(){
+  git checkout `git branch | fzf | tr -d '[:space:]'`
+}
+
+[ -f ~/.env ] && source ~/.env # ENV's this will be outside of git
+dockerStopAllContainers(){
+  docker stop $(docker ps -aq)
+}
+dockerRemoveAllContainers(){
+  dockerStopAllContainers
+  docker rm $(docker ps -aq)
+}
+dockerRemoveAllImages(){
+  dockerRemoveAllContainers
+  docker rmi $(docker images -aq)
+}
+add_npm_bin(){
+  echo "Adding $PWD/node_modules/.bin to PATH"
+  export set PATH=$PWD/node_modules/.bin:$PATH
+}
+command_exists () {
+    type "$1" &> /dev/null ;
+}
+
+export NVM_DIR="$HOME/.nvm"
+
+
+if command_exists zplug; then
+  echo "zplug installed"
+  export NVM_AUTO_USE=true
+  export NVM_NO_USE=true
+  #|| subtree load the good parts from oh-my-zsh
+  zplug "zsh-users/zsh-autosuggestions",          defer:2, on:"zsh-users/zsh-completions"
+  zplug "lukechilds/zsh-better-npm-completion", defer:2
+  zplug "lib/completion",      from:oh-my-zsh, defer:3
+  # zplug "lib/git",             from:oh-my-zsh, defer:3
+  zplug "lib/history",         from:oh-my-zsh, defer:1
+  zplug "lib/key-bindings",    from:oh-my-zsh, defer:1
+  zplug "plugins/npm",         from:oh-my-zsh, defer:3 
+  # zplug "akarzim/zsh-docker-aliases"
+  zplug "lukechilds/zsh-nvm", defer:3
+  zplug "lukechilds/zsh-better-npm-completion", defer:2
+  setopt prompt_subst # Make sure prompt is able to be generated properly.
+  # theme
+  # zplug "dracula/zsh", use:dracula.zsh-theme
+  # zplug "sindresorhus/pure", as:theme, use:"*.zsh"
+  # zplug "denysdovhan/spaceship-zsh-theme", use:spaceship.zsh, from:github, as:theme
+
+  zplug "caiogondim/bullet-train.zsh", use:bullet-train.zsh-theme
+  BULLETTRAIN_TIME_12HR=true
+  BULLETTRAIN_EXEC_TIME_ELAPSED=0
+  BULLETTRAIN_PROMPT_ORDER=(
+    time
+    nvm
+    dir
+    git
+    cmd_exec_time
+  )
+
+  # plugins
+  # zplug "tcnksm/docker-alias", use:zshrc
+  # zplug "tj/n",                hook-build:"make install"
+  zplug "andrewferrier/fzf-z"
+  zplug "felixr/docker-zsh-completion"
+  zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
+
+  # zplug "psprint/history-search-multi-word"
+  zplug "zsh-users/zsh-syntax-highlighting", defer:1
+  plugins+=(
+    git
+    nvm
+    yarn-autocompletions
+  )
+
+  zplug "plugins/git",   from:oh-my-zsh
+
+  # Install plugins if there are plugins that have not been installed
+  if ! zplug check --verbose; then
+    zplug install
+      # printf "Install? [y/N]: "
+      # if read -q; then
+         # zplug install
+      # fi
+  fi
+
+  alias vim="nvim"
+  alias vi="nvim"
+  alias oldvim="vim"
+  alias ll="exa -lar --icons"
+  #plugins+=(zsh-nvm)
+  zplug load
+else
+  echo "zplug is not installed"
+fi
+
+
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+command_exists () {
+    type "$1" &> /dev/null ;
+}
+function auto_load_xrun(){
+  if command_exists xrun; then
+    eval "$(xrun --completion=zsh)"
+  fi
+}
+auto_load_xrun
+autoload  add-zsh-hook
+add-zsh-hook chpwd auto_load_xrun
+
+function dsize()
+{
+    dir=$(pwd)
+    if [ "$1" != "" ]; then
+            dir=$1
+    fi
+    echo $(du -hs $dir)
+}
+
+vim_dir(){
+  old_dir=$PWD;
+  dir=$1;
+  echo "Changing directory from ${PWD} -> ${dir}";
+  cd $1;
+  nvim .
+  echo -n "Returning to original directory ${old_dir}. Is this ok? (y/n)"
+  read yesno < /dev/tty
+  if [ "x$yesno" = "xy" ];then
+    cd $old_dir;
+  else
+    echo "Staying in ${1}"
+  fi
+}
+
+[ -f ~/.zsh_functions ] && source ~/.zsh_functions
+
+# PROMPT_COMMAND="pre_prompt_command; $PROMPT_COMMAND"
+alias vim=nvim
+alias vi=nvim
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
+
+# pnpm
+export PNPM_HOME="/Users/vnguyen/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

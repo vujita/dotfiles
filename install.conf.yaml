@@ -1,0 +1,38 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+
+- clean: ['~']
+
+- link:
+    ~/.nvm: nvm
+    ~/.zplug: zplug
+    ~/.fzf: fzf
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.gitconfig: git-config/gitconfig
+    ~/.gitignore_global: git-config/gitignore_global
+    ~/.zshrc: zsh/zshrc
+    ~/.zsh_functions: zsh/zsh_functions
+    ~/.config/nvim: 
+        path: nvim
+    ~/.vimrc: 
+        path: vim/vimrc
+    # MacOS/
+    ~/.bashrc: 
+        path: bash/bashrc
+        if: '[ `uname` = Darwin ]'
+    ~/.zshrc-mac: 
+        path: zsh/zshrc-mac
+        if: '[ `uname` = Darwin ]'
+
+- create:
+    # - ~/downloads
+    # - ~/.vim/undo-history
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [chmod +x post-install.sh]
+  - [chmod +x run-postinstall.sh]
+  - [sh run-postinstall.sh]

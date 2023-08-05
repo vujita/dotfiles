@@ -1,0 +1,31 @@
+gch(){
+  git checkout `git branch | fzf | tr -d '[:space:]'`
+}
+
+gdh(){
+  git br -D `git branch | fzf | tr -d '[:space:]'`
+}
+
+takeNotes(){
+  old_dir=$PWD
+  cd $NOTES_DIR
+  git pull --rebase
+  vim .
+  git add .
+  git commit -m "update notes at $(date '+%a %M:%H %h %d %Y')"
+  git push
+  cd $old_dir
+}
+
+alias tls="clear && tmux clear-history"
+
+enableCorepackPnpm(){
+  VERSION="${1:-latest}"
+  corepack enable
+  corepack prepare pnpm@$VERSION --activate
+  pnpm install-completion
+}
+
+pnpmInstall(){
+  pnpm i --frozen-lockfile
+}
