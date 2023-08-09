@@ -25,3 +25,5 @@
     colorMoved = default
 [commit]
     gpgsign = false
+[pull]
+	rebase = true
