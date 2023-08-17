@@ -32,7 +32,11 @@ case $OS in
 		# Optional: exposing nvim globally.
 		sudo mv squashfs-root /
 		sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
-    sudo apt install -y gcc g++ exa
+    sudo apt install -y gcc \
+      g++ exa ripgrep \
+      python3-pip xclip fd-find
+
+    sudo pip3 install neovim
     LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 tar xf lazygit.tar.gz lazygit
