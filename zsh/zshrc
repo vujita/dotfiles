@@ -66,6 +66,7 @@ if command_exists zplug; then
   # zplug "denysdovhan/spaceship-zsh-theme", use:spaceship.zsh, from:github, as:theme
 
   zplug "caiogondim/bullet-train.zsh", use:bullet-train.zsh-theme
+  BULLETTRAIN_DIR_BG=gray
   BULLETTRAIN_TIME_12HR=true
   BULLETTRAIN_EXEC_TIME_ELAPSED=0
   BULLETTRAIN_PROMPT_ORDER=(
