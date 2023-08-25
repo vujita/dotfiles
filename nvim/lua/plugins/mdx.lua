@@ -1,0 +1,3 @@
+return {
+  { "findango/vim-mdx" },
+}
