@@ -34,7 +34,7 @@ case $OS in
 		sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
     sudo apt install -y gcc \
       g++ exa ripgrep \
-      python3-pip xclip fd-find
+      python3-pip xclip fd-find vim
 
     sudo pip3 install neovim
     LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
