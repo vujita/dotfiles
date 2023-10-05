@@ -25,7 +25,14 @@ require("lazy").setup({
     },
     { import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
-
+    {
+      "nvimtools/none-ls.nvim",
+      optional = true,
+      opts = function(_, opts)
+        local nls = require("null-ls")
+        table.insert(opts.sources, nls.builtins.formatting.prettierd)
+      end,
+    },
     { import = "lazyvim.plugins.extras.lang.python" },
     { import = "lazyvim.plugins.extras.dap.core" },
     { import = "lazyvim.plugins.extras.dap.nlua" },
