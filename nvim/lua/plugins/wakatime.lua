@@ -1,4 +1,4 @@
 return {
   "wakatime/vim-wakatime",
-  enabled = os.getenv("CODESPACES") ~= "true",
+  -- enabled = os.getenv("CODESPACES") ~= "true",
 }
