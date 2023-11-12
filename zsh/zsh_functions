@@ -40,13 +40,21 @@ dotfilesMod(){
   . ~/.zshrc
 }
 
-ranchoSingleScreen(){
+setRanchoSingleScreen(){
   echo "setting 4k res for one monitor"
   displayplacer "id:9E7175C0-6F8F-E022-FD74-A7B28230476E res:3840x2160 hz:60 color_depth:8 enabled:true scaling:off origin:(0,0) degree:0" "id:9E169C87-30EA-F74A-4723-30C626DF25E3 res:1792x1120 hz:59 color_depth:4 enabled:true scaling:on origin:(3840,868) degree:0"
 }
 
-ranchoSingleShareScreen(){
+setRanchoSingleShareScreen(){
   echo "setting 2k res for better sharing"
   displayplacer "id:9E7175C0-6F8F-E022-FD74-A7B28230476E res:2560x1440 hz:60 color_depth:4 enabled:true scaling:off origin:(0,0) degree:0" "id:9E169C87-30EA-F74A-4723-30C626DF25E3 res:1792x1120 hz:59 color_depth:4 enabled:true scaling:on origin:(2560,868) degree:0"
 }
 
+setColbertOfficeScreen(){
+  displayplacer "id:58435EFB-1723-2110-D958-EC7BF08324AF res:3840x2160 hz:60 color_depth:4 enabled:true scaling:off origin:(0,0) degree:0" "id:9E169C87-30EA-F74A-4723-30C626DF25E3 res:1792x1120 hz:59 color_depth:4 enabled:true scaling:on origin:(-1792,814) degree:0"
+}
+
+setColbertShareOffice(){
+  displayplacer "id:58435EFB-1723-2110-D958-EC7BF08324AF res:2560x1440 hz:60 color_depth:4 enabled:true scaling:off origin:(0,0) degree:0" "id:9E169C87-30EA-F74A-4723-30C626DF25E3 res:1792x1120 hz:59 color_dep
+th:4 enabled:true scaling:on origin:(-1792,814) degree:0"
+}
