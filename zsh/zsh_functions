@@ -30,6 +30,11 @@ pnpmInstall(){
   pnpm i --frozen-lockfile
 }
 
+pnpmReinstall(){
+ gpristine src apps packages node_modules
+ pnpmInstall
+}
+
 gfr(){
   gfa
   gpr
