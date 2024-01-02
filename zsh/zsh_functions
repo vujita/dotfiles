@@ -64,6 +64,6 @@ setColbertShareOffice(){
 th:4 enabled:true scaling:on origin:(-1792,814) degree:0"
 }
 
-displaySleep(){
+lockScreen(){
   pmset displaysleepnow
 }
