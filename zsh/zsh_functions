@@ -67,3 +67,7 @@ th:4 enabled:true scaling:on origin:(-1792,814) degree:0"
 lockScreen(){
   pmset displaysleepnow
 }
+
+codeSpaceCodeInstall(){
+  sh /workspaces/.codespaces/.persistedshare/dotfiles/post-install.sh
+}
