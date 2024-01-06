@@ -4,7 +4,7 @@
       relink: true
       force: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
     ~/.nvm: nvm
@@ -15,24 +15,24 @@
     ~/.gitignore_global: git-config/gitignore_global
     ~/.zshrc: zsh/zshrc
     ~/.zsh_functions: zsh/zsh_functions
-    ~/.config/nvim: 
-        path: nvim
-    ~/.vimrc: 
-        path: vim/vimrc
+    ~/.config/nvim:
+      path: nvim
+    ~/.vimrc:
+      path: vim/vimrc
     # MacOS/
-    ~/.bashrc: 
-        path: bash/bashrc
-        if: '[ `uname` = Darwin ]'
-    ~/.zshrc-mac: 
-        path: zsh/zshrc-mac
-        if: '[ `uname` = Darwin ]'
+    ~/.bashrc:
+      path: bash/bashrc
+      if: "[ `uname` = Darwin ]"
+    ~/.zshrc-mac:
+      path: zsh/zshrc-mac
+      if: "[ `uname` = Darwin ]"
 
 - create:
     # - ~/downloads
     # - ~/.vim/undo-history
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
-  - [chmod +x post-install.sh]
-  - [chmod +x run-postinstall.sh]
-  - [sh run-postinstall.sh]
+    - [git submodule update --init --recursive, Installing submodules]
+    - [chmod +x post-install.sh]
+    - [chmod +x run-postinstall.sh]
+  # - [sh run-postinstall.sh]
