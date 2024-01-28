@@ -35,4 +35,4 @@
     - [git submodule update --init --recursive, Installing submodules]
     - [chmod +x post-install.sh]
     - [chmod +x run-postinstall.sh]
-  # - [sh run-postinstall.sh]
+    - [sh run-postinstall.sh]

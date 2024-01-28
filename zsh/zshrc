@@ -10,7 +10,14 @@ set -o allexport
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 export set EDITOR=nvim
 export set CODE_DIRECTORY="${HOME}/code"
-export set DOTFILES_DIR="${CODE_DIRECTORY}/dotfiles"
+
+if [ -z $CODESPACES ]; then
+  export set DOTFILES_DIR="${CODE_DIRECTORY}/dotfiles"
+else
+  # reset DOTFILES_DIR env
+  export set DOTFILES_DIR="/workspaces/.codespaces/.persistedshare/dotfiles"
+fi
+
 export set NOTES_DIR="${CODE_DIRECTORY}/notes"
 [ -f ~/.env ] && source ~/.env
 

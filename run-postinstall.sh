@@ -7,6 +7,7 @@ if [ -z $CODESPACES ]; then
 else
 	echo "Is in CODESPACES"
   chmod +x codespaces-setup.sh 
-  ./codespaces-setup.sh
-  echo "Finished setup"
+  echo "Run codespaces-setup.sh later"
+  # ./codespaces-setup.sh
+  # echo "Finished setup"
 fi
