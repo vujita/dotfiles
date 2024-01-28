@@ -1,4 +1,5 @@
 return {
   "wakatime/vim-wakatime",
-  -- enabled = os.getenv("CODESPACES") ~= "true",
+  -- disable in CODESPACES, it is a bit of a pain to always enter api key
+  enabled = os.getenv("CODESPACES") ~= "true",
 }
