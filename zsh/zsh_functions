@@ -73,8 +73,7 @@ codeSpaceCodeInstall(){
 }
 
 setMacMiniMirror(){
-  displayplacer "id:9BE83806-79AE-633D-6DA7-30B05390735B+04C5D8B4-2B51-C661-8BB5-66089AB4BF23 res:1920x1080 hz:60 color_depth:8 enabled:true scaling:off origin:(0,0) degree:
-0"
+  displayplacer "id:DBFDABEF-C8BC-A992-0D24-AC17895627FF+04C5D8B4-2B51-C661-8BB5-66089AB4BF23 res:2560x1440 hz:50 color_depth:4 enabled:true scaling:off origin:(0,0) degree:0"
 }
 
 setMacMiniDualScreen(){
