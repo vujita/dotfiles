@@ -13,39 +13,6 @@ require("lazy").setup({
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
     },
-    {
-      "folke/tokyonight.nvim",
-      opts = {
-        transparent = true,
-        styles = {
-          sidebars = "transparent",
-          floats = "transparent",
-        },
-      },
-    },
-    { import = "lazyvim.plugins.extras.linting.eslint" },
-    { import = "lazyvim.plugins.extras.formatting.prettier" },
-    {
-      "nvimtools/none-ls.nvim",
-      optional = true,
-      opts = function(_, opts)
-        local nls = require("null-ls")
-        table.insert(opts.sources, nls.builtins.formatting.prettierd)
-      end,
-    },
-    { import = "lazyvim.plugins.extras.coding.copilot" },
-    { import = "lazyvim.plugins.extras.lang.python" },
-    { import = "lazyvim.plugins.extras.dap.core" },
-    { import = "lazyvim.plugins.extras.dap.nlua" },
-    { import = "lazyvim.plugins.extras.test.core" },
-    { import = "lazyvim.plugins.extras.vscode" },
-
-    -- import any extras modules here
-    { import = "lazyvim.plugins.extras.lang.typescript" },
-    { import = "lazyvim.plugins.extras.lang.json" },
-    { import = "lazyvim.plugins.extras.lang.tailwind" },
-
-    -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
     { import = "plugins" },
   },
@@ -58,7 +25,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  checker = { enabled = true }, -- automatically check for plugin updates
+  checker = { enabled = false }, -- automatically check for plugin updates
   performance = {
     rtp = {
       -- disable some rtp plugins
