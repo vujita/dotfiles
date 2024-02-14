@@ -19,6 +19,10 @@ vim.keymap.set("v", "<C-q>", function()
 end)
 vim.opt.smartindent = true
 vim.opt.autoindent = true
+-- spaces not tabs
+vim.opt.expandtab = true
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
 
 -- Undo tree
 vim.opt.swapfile = false
