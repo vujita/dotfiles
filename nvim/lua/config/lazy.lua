@@ -33,6 +33,7 @@ require("lazy").setup({
         table.insert(opts.sources, nls.builtins.formatting.prettierd)
       end,
     },
+    { import = "lazyvim.plugins.extras.coding.copilot" },
     { import = "lazyvim.plugins.extras.lang.python" },
     { import = "lazyvim.plugins.extras.dap.core" },
     { import = "lazyvim.plugins.extras.dap.nlua" },
@@ -70,6 +71,7 @@ require("lazy").setup({
         "tohtml",
         "tutor",
         "zipPlugin",
+        "Jxstxs/conceal.nvim",
       },
     },
   },
