@@ -21,7 +21,6 @@ brew "git-delta"
 brew "tcl-tk"
 brew "git-gui"
 brew "gnu-sed"
-brew "gnutls", link: false
 brew "gnupg", link: false
 brew "harfbuzz", link: false
 brew "jq", link: false
@@ -33,9 +32,9 @@ brew "openjdk@11"
 brew "openapi-generator", link: false
 brew "openjdk"
 brew "postgresql@14", restart_service: true
-brew "pyenv", link: false
+brew "pyenv"
 brew "python@3.9", link: false
-brew "ripgrep", link: false
+brew "ripgrep"
 brew "stow", link: false
 brew "the_silver_searcher", link: false
 brew "tmux", link: false
