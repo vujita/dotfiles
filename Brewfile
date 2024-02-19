@@ -1,47 +1,50 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "jakehilborn/jakehilborn"
 brew "gmp"
 brew "coreutils"
+brew "libyaml", link: false
 brew "asdf"
+brew "libssh2", link: false
 brew "bat"
-brew "glib"
-brew "cmake"
+brew "glib", link: false
+brew "cmake", link: false
 brew "curl"
 brew "exa"
-brew "fd"
-brew "flux"
+brew "fd", link: false
+brew "flux", link: false
 brew "gawk"
 brew "gh"
-brew "git"
+brew "git", link: false
 brew "git-delta"
 brew "tcl-tk"
 brew "git-gui"
-brew "gnupg"
-brew "harfbuzz"
-brew "jq"
-brew "krb5"
-brew "lazygit"
-brew "libsass"
-brew "mkcert"
-brew "neovim"
-brew "openapi-generator"
+brew "gnu-sed"
+brew "gnutls", link: false
+brew "gnupg", link: false
+brew "harfbuzz", link: false
+brew "jq", link: false
+brew "lazygit", link: false
+brew "libsass", link: false
+brew "mkcert", link: false
+brew "neovim", link: false
+brew "openjdk@11"
+brew "openapi-generator", link: false
 brew "openjdk"
 brew "postgresql@14", restart_service: true
-brew "pyenv"
-brew "python@3.9"
-brew "ripgrep"
-brew "stow"
-brew "the_silver_searcher"
-brew "tmux"
-brew "wget"
-brew "yarn"
-brew "zplug"
-brew "zsh"
-brew "jakehilborn/jakehilborn/displayplacer"
+brew "pyenv", link: false
+brew "python@3.9", link: false
+brew "ripgrep", link: false
+brew "stow", link: false
+brew "the_silver_searcher", link: false
+brew "tmux", link: false
+brew "wget", link: false
+brew "yarn", link: false
+brew "zoxide"
+brew "zplug", link: false
+brew "zsh", link: false
+brew "jakehilborn/jakehilborn/displayplacer", link: false
 cask "datagrip"
 cask "dbeaver-community"
 cask "docker"
@@ -98,6 +101,7 @@ cask "font-ubuntu-mono-nerd-font"
 cask "font-ubuntu-nerd-font"
 cask "font-victor-mono"
 cask "font-victor-mono-nerd-font"
+cask "google-chrome"
 cask "insomnia"
 cask "iterm2"
 cask "jetbrains-toolbox"
@@ -110,24 +114,28 @@ cask "slack"
 cask "visual-studio-code"
 cask "webstorm"
 cask "zoom"
+vscode "asvetliakov.vscode-neovim"
 vscode "austenc.tailwind-docs"
 vscode "bradlc.vscode-tailwindcss"
 vscode "capaj.graphql-codegen-vscode"
-vscode "DavidAnson.vscode-markdownlint"
+vscode "davidanson.vscode-markdownlint"
 vscode "dbaeumer.vscode-eslint"
 vscode "eamodio.gitlens"
-vscode "EditorConfig.EditorConfig"
+vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
 vscode "firsttris.vscode-jest-runner"
 vscode "formulahendry.auto-rename-tag"
-vscode "GitHub.codespaces"
-vscode "GitHub.copilot"
+vscode "github.codespaces"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "github.vscode-github-actions"
-vscode "GitHub.vscode-pull-request-github"
+vscode "github.vscode-pull-request-github"
 vscode "heybourn.headwind"
-vscode "IronGeek.vscode-env"
+vscode "irongeek.vscode-env"
+vscode "mcright.auto-save"
 vscode "mikestead.dotenv"
 vscode "ms-azuretools.vscode-docker"
+vscode "ms-python.debugpy"
 vscode "ms-python.isort"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
@@ -141,12 +149,11 @@ vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-server"
 vscode "nrwl.angular-console"
 vscode "orsenkucher.vscode-graphql"
-vscode "Prisma.prisma"
+vscode "prisma.prisma"
 vscode "quicktype.quicktype"
 vscode "rokoroku.vscode-theme-darcula"
 vscode "rvest.vs-code-prettier-eslint"
 vscode "steoates.autoimport"
-vscode "vscodevim.vim"
-vscode "WakaTime.vscode-wakatime"
+vscode "wakatime.vscode-wakatime"
 vscode "wix.vscode-import-cost"
 vscode "yoavbls.pretty-ts-errors"

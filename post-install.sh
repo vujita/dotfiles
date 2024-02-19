@@ -23,6 +23,7 @@ echo "$OS detected"
 case $OS in
 'Linux')
 	echo "Linux"
+    curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
     ./fonts/install.sh
 		curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 		chmod u+x nvim.appimage

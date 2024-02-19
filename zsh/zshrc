@@ -1,4 +1,5 @@
 #!/bin/zsh
+eval "$(zoxide init zsh)"
 export ZPLUG_HOME=~/.zplug
 [ -f $ZPLUG_HOME/init.zsh ] && source $ZPLUG_HOME/init.zsh
 mkdir -p ~/.nvm
@@ -62,7 +63,7 @@ if command_exists zplug; then
   # zplug "lib/git",             from:oh-my-zsh, defer:3
   zplug "lib/history",         from:oh-my-zsh, defer:1
   zplug "lib/key-bindings",    from:oh-my-zsh, defer:1
-  zplug "plugins/npm",         from:oh-my-zsh, defer:3 
+  zplug "plugins/npm",         from:oh-my-zsh, defer:3
   # zplug "akarzim/zsh-docker-aliases"
   zplug "lukechilds/zsh-nvm", defer:3
   zplug "lukechilds/zsh-better-npm-completion", defer:2
