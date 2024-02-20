@@ -1,5 +1,0 @@
-return {
-  {
-    "AndrewRadev/tagalong.vim",
-  },
-}

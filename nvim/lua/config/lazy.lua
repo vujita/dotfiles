@@ -30,6 +30,8 @@ require("lazy").setup({
     rtp = {
       -- disable some rtp plugins
       disabled_plugins = {
+        "ggandor/leap.nvim",
+        "ggandor/flit.nvim",
         "gzip",
         -- "matchit",
         -- "matchparen",
