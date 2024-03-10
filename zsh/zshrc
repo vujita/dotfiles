@@ -51,22 +51,31 @@ command_exists () {
 
 export NVM_DIR="$HOME/.nvm"
 
+export NVM_COMPLETION=true
+export NVM_AUTO_USE=true
+export NVM_NO_USE=true
+
+if command_exists zap; then
+  plug "chivalryq/git-alias"
+  plug "lukechilds/zsh-better-npm-completion"
+  plug "andrewferrier/fzf-z"
+  plug "felixr/docker-zsh-completion"
+  plug "lukechilds/zsh-nvm"
+  plug "lukechilds/zsh-better-npm-completion"
+else
+  echo "zap plugins is not installed because zap not installed"
+fi
 
 if command_exists zplug; then
   echo "zplug installed"
-  export NVM_AUTO_USE=true
-  export NVM_NO_USE=true
   #|| subtree load the good parts from oh-my-zsh
   zplug "zsh-users/zsh-autosuggestions",          defer:2, on:"zsh-users/zsh-completions"
-  zplug "lukechilds/zsh-better-npm-completion", defer:2
   zplug "lib/completion",      from:oh-my-zsh, defer:3
   # zplug "lib/git",             from:oh-my-zsh, defer:3
   zplug "lib/history",         from:oh-my-zsh, defer:1
   zplug "lib/key-bindings",    from:oh-my-zsh, defer:1
   zplug "plugins/npm",         from:oh-my-zsh, defer:3
   # zplug "akarzim/zsh-docker-aliases"
-  zplug "lukechilds/zsh-nvm", defer:3
-  zplug "lukechilds/zsh-better-npm-completion", defer:2
   setopt prompt_subst # Make sure prompt is able to be generated properly.
   # theme
   # zplug "dracula/zsh", use:dracula.zsh-theme
@@ -88,8 +97,6 @@ if command_exists zplug; then
   # plugins
   # zplug "tcnksm/docker-alias", use:zshrc
   # zplug "tj/n",                hook-build:"make install"
-  zplug "andrewferrier/fzf-z"
-  zplug "felixr/docker-zsh-completion"
   zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
 
   # zplug "psprint/history-search-multi-word"
@@ -111,10 +118,6 @@ if command_exists zplug; then
       # fi
   fi
 
-  alias vim="nvim"
-  alias vi="nvim"
-  alias oldvim="vim"
-  alias ll="exa -lar --icons"
   #plugins+=(zsh-nvm)
   zplug load
 else
@@ -122,6 +125,10 @@ else
 fi
 
 
+alias vim="nvim"
+alias vi="nvim"
+alias oldvim="vim"
+alias ll="exa -lar --icons"
 
 
 export NVM_DIR="$HOME/.nvm"
@@ -129,6 +136,8 @@ export NVM_DIR="$HOME/.nvm"
 [[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/config/tabtab/zsh/__tabtab.zsh ] && source ~/config/tabtab/zsh/__tabtab.zsh
+
 command_exists () {
     type "$1" &> /dev/null ;
 }
@@ -162,6 +171,7 @@ vim_dir(){
     cd $old_dir;
   else
     echo "Staying in ${1}"
+[[]]
   fi
 }
 

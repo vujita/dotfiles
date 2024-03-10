@@ -1,5 +1,15 @@
 #!/bin/zsh
 
+command_exists () {
+  type "$1" &> /dev/null ;
+}
+
+if command_exists brew ; then
+  echo "zap already installed"
+else
+  zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+fi
+
 fzf/install --all
 nvm/install.sh
 echo "Install node and source nvm"
@@ -56,9 +66,6 @@ case $OS in
 'Darwin')
 	echo "Is Mac"
 
-  command_exists () {
-      type "$1" &> /dev/null ;
-  }
 	./fonts/install.sh
   if command_exists brew ; then
     echo "Brew already installed"
