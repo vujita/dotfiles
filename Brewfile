@@ -22,13 +22,11 @@ brew "tcl-tk"
 brew "git-gui"
 brew "gnu-sed"
 brew "gnupg", link: false
-brew "harfbuzz", link: false
 brew "jq", link: false
 brew "lazygit", link: false
 brew "libsass", link: false
 brew "mkcert", link: false
 brew "neovim", link: false
-brew "openjdk@11"
 brew "openapi-generator", link: false
 brew "openjdk"
 brew "postgresql@14", restart_service: true
@@ -37,7 +35,7 @@ brew "python@3.9", link: false
 brew "ripgrep"
 brew "stow", link: false
 brew "the_silver_searcher", link: false
-brew "tmux", link: false
+brew "tmux"
 brew "wget", link: false
 brew "yarn", link: false
 brew "zoxide"
