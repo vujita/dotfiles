@@ -1232,9 +1232,6 @@
               "sha256": "ab667b4b8ce2b55f8c654d85520831f05590b1df4c2ddd277149d24681643a20"
             }
           }
-        },
-        "options": {
-          "link": false
         }
       },
       "nvm": {

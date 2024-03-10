@@ -55,12 +55,19 @@ case $OS in
 	;;
 'Darwin')
 	echo "Is Mac"
+
+  command_exists () {
+      type "$1" &> /dev/null ;
+  }
 	./fonts/install.sh
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  if command_exists brew ; then
+    echo "Brew already installed"
+  else
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
 	brew bundle
 	chmod +x brew-update-deps.sh
 	./brew-update-deps.sh
-  pip3 install --user pynvim
 	;;
 'SunOS')
 	echo "SunOS"

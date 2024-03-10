@@ -26,7 +26,7 @@ brew "jq", link: false
 brew "lazygit", link: false
 brew "libsass", link: false
 brew "mkcert", link: false
-brew "neovim", link: false
+brew "neovim"
 brew "openapi-generator", link: false
 brew "openjdk"
 brew "postgresql@14", restart_service: true
