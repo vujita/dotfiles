@@ -3,8 +3,7 @@
 -- Add any additional options here
 vim.opt.mouse = "a"
 vim.opt.number = true
-vim.opt.relativenumber = true
-
+vim.opt.relativenumber = false
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 

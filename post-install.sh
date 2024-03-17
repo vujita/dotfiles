@@ -7,7 +7,9 @@ command_exists () {
 if command_exists zap ; then
   echo "zap already installed"
 else
+  mv ~/.zshrc ~/.zshrc_tmp
   zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+  mv ~/.zshrc_tmp ~/.zshrc
 fi
 
 fzf/install --all

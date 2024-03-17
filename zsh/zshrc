@@ -22,7 +22,6 @@ fi
 export set NOTES_DIR="${CODE_DIRECTORY}/notes"
 [ -f ~/.env ] && source ~/.env
 
-alias so="source ~/.zshrc"
 
 
 gch(){
@@ -63,12 +62,13 @@ if command_exists zap; then
   plug "lukechilds/zsh-nvm"
   plug "lukechilds/zsh-better-npm-completion"
 else
-  echo "zap plugins is not installed because zap not installed"
+  # if zap is not installed, do nothing
 fi
 
 
 eval "$(starship init zsh)"
 
+alias so="source ~/.zshrc"
 alias vim="nvim"
 alias vi="nvim"
 alias oldvim="vim"
@@ -121,9 +121,6 @@ vim_dir(){
 
 [ -f ~/.zsh_functions ] && source ~/.zsh_functions
 
-# PROMPT_COMMAND="pre_prompt_command; $PROMPT_COMMAND"
-alias vim=nvim
-alias vi=nvim
 
 # tabtab source for packages
 # uninstall by removing these lines
