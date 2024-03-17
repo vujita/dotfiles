@@ -46,7 +46,6 @@ brew "tmux"
 brew "wget", link: false
 brew "yarn", link: false
 brew "zoxide"
-brew "zplug", link: false
 brew "zsh", link: false
 brew "jakehilborn/jakehilborn/displayplacer", link: false
 cask "datagrip"
