@@ -1,7 +1,7 @@
 #!/bin/zsh
 
-#echo "Run brew bundle"
-#brew bundle
+echo "Run brew bundle"
+brew bundle
 
 echo "Regenerate Brewfile"
 rm Brewfile
