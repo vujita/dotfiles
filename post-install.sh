@@ -69,7 +69,7 @@ case $OS in
 'Darwin')
 	echo "Is Mac"
 
-	./fonts/install.sh
+	# ./fonts/install.sh
   if command_exists brew ; then
     echo "Brew already installed"
   else
