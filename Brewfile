@@ -41,6 +41,7 @@ brew "ripgrep"
 brew "starship"
 brew "stow", link: false
 brew "the_silver_searcher", link: false
+brew "tldr"
 brew "tmux"
 brew "wget", link: false
 brew "yarn", link: false
