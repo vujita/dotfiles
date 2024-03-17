@@ -66,64 +66,8 @@ else
   echo "zap plugins is not installed because zap not installed"
 fi
 
-if command_exists zplug; then
-  echo "zplug installed"
-  #|| subtree load the good parts from oh-my-zsh
-  zplug "zsh-users/zsh-autosuggestions",          defer:2, on:"zsh-users/zsh-completions"
-  zplug "lib/completion",      from:oh-my-zsh, defer:3
-  # zplug "lib/git",             from:oh-my-zsh, defer:3
-  zplug "lib/history",         from:oh-my-zsh, defer:1
-  zplug "lib/key-bindings",    from:oh-my-zsh, defer:1
-  zplug "plugins/npm",         from:oh-my-zsh, defer:3
-  # zplug "akarzim/zsh-docker-aliases"
-  setopt prompt_subst # Make sure prompt is able to be generated properly.
-  # theme
-  # zplug "dracula/zsh", use:dracula.zsh-theme
-  # zplug "sindresorhus/pure", as:theme, use:"*.zsh"
-  # zplug "denysdovhan/spaceship-zsh-theme", use:spaceship.zsh, from:github, as:theme
 
-  zplug "caiogondim/bullet-train.zsh", use:bullet-train.zsh-theme
-  BULLETTRAIN_DIR_BG=gray
-  BULLETTRAIN_TIME_12HR=true
-  BULLETTRAIN_EXEC_TIME_ELAPSED=0
-  BULLETTRAIN_PROMPT_ORDER=(
-    time
-    nvm
-    dir
-    git
-    cmd_exec_time
-  )
-
-  # plugins
-  # zplug "tcnksm/docker-alias", use:zshrc
-  # zplug "tj/n",                hook-build:"make install"
-  zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
-
-  # zplug "psprint/history-search-multi-word"
-  zplug "zsh-users/zsh-syntax-highlighting", defer:1
-  plugins+=(
-    git
-    nvm
-    yarn-autocompletions
-  )
-
-  zplug "plugins/git",   from:oh-my-zsh
-
-  # Install plugins if there are plugins that have not been installed
-  if ! zplug check --verbose; then
-    zplug install
-      # printf "Install? [y/N]: "
-      # if read -q; then
-         # zplug install
-      # fi
-  fi
-
-  #plugins+=(zsh-nvm)
-  zplug load
-else
-  echo "zplug is not installed"
-fi
-
+eval "$(starship init zsh)"
 
 alias vim="nvim"
 alias vi="nvim"

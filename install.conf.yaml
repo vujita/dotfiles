@@ -17,6 +17,7 @@
     ~/.zsh_functions: zsh/zsh_functions
     ~/.config/nvim:
       path: nvim
+    ~/.config/starship.toml: starship/starship.toml
     ~/.vimrc:
       path: vim/vimrc
     # MacOS/

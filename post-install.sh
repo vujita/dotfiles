@@ -4,7 +4,7 @@ command_exists () {
   type "$1" &> /dev/null ;
 }
 
-if command_exists brew ; then
+if command_exists zap ; then
   echo "zap already installed"
 else
   zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
