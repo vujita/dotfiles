@@ -7,9 +7,6 @@
 [submodule "fzf"]
 	path = fzf
 	url = https://github.com/junegunn/fzf.git
-[submodule "zplug"]
-	path = zplug
-	url = https://github.com/zplug/zplug
 [submodule "nvm"]
 	path = nvm
 	url = https://github.com/nvm-sh/nvm.git
