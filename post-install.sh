@@ -13,6 +13,7 @@ else
   mv ~/.zshrc_tmp ~/.zshrc
 fi
 
+curl -sS https://starship.rs/install.sh | sh
 fzf/install --all
 nvm/install.sh
 echo "Install node and source nvm"
