@@ -4,50 +4,50 @@ tap "homebrew/services"
 tap "jakehilborn/jakehilborn"
 brew "gmp"
 brew "coreutils"
-brew "libyaml", link: false
 brew "asdf"
-brew "libssh2", link: false
 brew "bat"
-brew "glib", link: false
+brew "glib"
+brew "cairo"
 brew "pycparser"
 brew "cffi"
-brew "cmake", link: false
+brew "cmake"
 brew "curl"
 brew "exa"
-brew "fd", link: false
-brew "flux", link: false
+brew "fd"
+brew "flux"
 brew "gawk"
 brew "gh"
-brew "git", link: false
+brew "git"
 brew "git-delta"
 brew "tcl-tk"
 brew "git-gui"
 brew "gnu-sed"
-brew "gnupg", link: false
+brew "gnutls"
+brew "libassuan"
+brew "gnupg"
 brew "harfbuzz"
 brew "ipython"
-brew "jq", link: false
-brew "lazygit", link: false
-brew "libsass", link: false
-brew "mkcert", link: false
+brew "jq"
+brew "lazygit"
+brew "little-cms2"
+brew "mkcert"
 brew "neovim"
+brew "openjdk@11"
 brew "openapi-generator", link: false
 brew "openjdk"
 brew "postgresql@14", restart_service: true
 brew "pyenv"
 brew "python@3.11"
-brew "python@3.9", link: false
+brew "python@3.9"
 brew "ripgrep"
 brew "starship"
-brew "stow", link: false
-brew "the_silver_searcher", link: false
+brew "stow"
+brew "the_silver_searcher"
 brew "tldr"
 brew "tmux"
-brew "wget", link: false
-brew "yarn", link: false
+brew "wget"
 brew "zoxide"
-brew "zsh", link: false
-brew "jakehilborn/jakehilborn/displayplacer", link: false
+brew "jakehilborn/jakehilborn/displayplacer"
 cask "datagrip"
 cask "dbeaver-community"
 cask "docker"
@@ -104,7 +104,6 @@ cask "font-ubuntu-mono-nerd-font"
 cask "font-ubuntu-nerd-font"
 cask "font-victor-mono"
 cask "font-victor-mono-nerd-font"
-cask "google-chrome"
 cask "insomnia"
 cask "iterm2"
 cask "jetbrains-toolbox"
