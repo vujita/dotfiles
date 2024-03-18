@@ -6,8 +6,8 @@ if [ -z $CODESPACES ]; then
 	./post-install.sh
 else
 	echo "Is in CODESPACES"
-  chmod +x codespaces-setup.sh 
-  echo "Run codespaces-setup.sh later"
-  # ./codespaces-setup.sh
-  # echo "Finished setup"
+  chmod +x codespaces-setup.sh
+  echo "Run codespaces-setup.sh later if this fails"
+  ./codespaces-setup.sh
+  echo "Finished setup"
 fi
