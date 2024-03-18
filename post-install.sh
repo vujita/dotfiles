@@ -1,19 +1,9 @@
 #!/bin/zsh
 
-export DEBIAN_FRONTEND=noninteractive
 command_exists () {
   type "$1" &> /dev/null ;
 }
 
-if command_exists zap ; then
-  echo "zap already installed"
-else
-  mv ~/.zshrc ~/.zshrc_tmp
-  zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
-  mv ~/.zshrc_tmp ~/.zshrc
-fi
-
-curl -sS https://starship.rs/install.sh | sh
 fzf/install --all
 nvm/install.sh
 echo "Install node and source nvm"
@@ -37,6 +27,9 @@ echo "$OS detected"
 case $OS in
 'Linux')
 	echo "Linux"
+    mv ~/.zshrc ~/.zshrc_tmp
+    zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+    mv ~/.zshrc_tmp ~/.zshrc
     curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | zsh
     curl -sS https://starship.rs/install.sh | sh
     ./fonts/install.sh
@@ -70,7 +63,14 @@ case $OS in
 	;;
 'Darwin')
 	echo "Is Mac"
-
+  if command_exists zap ; then
+    echo "zap already installed"
+  else
+    mv ~/.zshrc ~/.zshrc_tmp
+    zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+    mv ~/.zshrc_tmp ~/.zshrc
+  fi
+   curl -sS https://starship.rs/install.sh | sh
 	./fonts/install.sh
   if command_exists brew ; then
     echo "Brew already installed"
