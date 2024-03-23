@@ -28,7 +28,7 @@ case $OS in
 'Linux')
 	echo "Linux"
     mv ~/.zshrc ~/.zshrc_tmp
-    zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+    zsh zap/zap-install.zsh --branch release-v1 --keep true
     mv ~/.zshrc_tmp ~/.zshrc
     curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | zsh
     curl -sS https://starship.rs/install.sh | sh
@@ -67,10 +67,10 @@ case $OS in
     echo "zap already installed"
   else
     mv ~/.zshrc ~/.zshrc_tmp
-    zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+    rm -rf $ZAP_DIR
+    zsh zap/zap-install.zsh --branch release-v1 --keep true
     mv ~/.zshrc_tmp ~/.zshrc
   fi
-   curl -sS https://starship.rs/install.sh | sh
 	./fonts/install.sh
   if command_exists brew ; then
     echo "Brew already installed"
