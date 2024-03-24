@@ -21,7 +21,8 @@ if [ ! -d $TPM_FOLDER ]; then
 else
 	echo "Already exists"
 fi
-
+chmod +x starship/starship-install.sh
+./starship/starship-install.sh --yes
 OS="$(uname)"
 echo "$OS detected"
 case $OS in
@@ -31,7 +32,6 @@ case $OS in
     zsh zap/zap-install.zsh --branch release-v1 --keep true
     mv ~/.zshrc_tmp ~/.zshrc
     curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | zsh
-    curl -sS https://starship.rs/install.sh | sh
     ./fonts/install.sh
 		curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 		chmod u+x nvim.appimage
@@ -77,7 +77,7 @@ case $OS in
   else
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
-	brew bundle
+	brew bundle install
 	chmod +x brew-update-deps.sh
 	./brew-update-deps.sh
 	;;

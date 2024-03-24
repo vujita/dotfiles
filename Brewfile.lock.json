@@ -1576,50 +1576,6 @@
           }
         }
       },
-      "starship": {
-        "version": "1.18.0",
-        "bottle": {
-          "rebuild": 0,
-          "root_url": "https://ghcr.io/v2/homebrew/core",
-          "files": {
-            "arm64_sonoma": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/starship/blobs/sha256:ab8783684e5e78aea7aa22d785edacd8729ba4b7ada4a5710653e24e16ee1674",
-              "sha256": "ab8783684e5e78aea7aa22d785edacd8729ba4b7ada4a5710653e24e16ee1674"
-            },
-            "arm64_ventura": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/starship/blobs/sha256:659865f4f7e39ed8fbd11d29e1621e3e04de7ff735fede5821b4cfb1a05e8a7a",
-              "sha256": "659865f4f7e39ed8fbd11d29e1621e3e04de7ff735fede5821b4cfb1a05e8a7a"
-            },
-            "arm64_monterey": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/starship/blobs/sha256:cd8c8b592b7c39e750bc74ab658af18c38298efff3a73cdb45d8fde882e89d56",
-              "sha256": "cd8c8b592b7c39e750bc74ab658af18c38298efff3a73cdb45d8fde882e89d56"
-            },
-            "sonoma": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/starship/blobs/sha256:79479c7b6d77612abc87da8f9f3d784ae098e85fe8c8ea470a4fd5dce01c3d1a",
-              "sha256": "79479c7b6d77612abc87da8f9f3d784ae098e85fe8c8ea470a4fd5dce01c3d1a"
-            },
-            "ventura": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/starship/blobs/sha256:f4868ea05619682a4de2ee12546fd96dadb11adc2cb78b7ec626ad5bd3540716",
-              "sha256": "f4868ea05619682a4de2ee12546fd96dadb11adc2cb78b7ec626ad5bd3540716"
-            },
-            "monterey": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/starship/blobs/sha256:37780e9e379688a4ed806dcc143cc018deaacdafc129e40d20d53dd870abd754",
-              "sha256": "37780e9e379688a4ed806dcc143cc018deaacdafc129e40d20d53dd870abd754"
-            },
-            "x86_64_linux": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/starship/blobs/sha256:7cdc7b2ab7017eb24c4032905039b6a117d35b4397c85a0d2ff033a42aefee42",
-              "sha256": "7cdc7b2ab7017eb24c4032905039b6a117d35b4397c85a0d2ff033a42aefee42"
-            }
-          }
-        }
-      },
       "stow": {
         "version": "2.3.1",
         "bottle": {
@@ -2006,7 +1962,7 @@
         }
       },
       "dbeaver-community": {
-        "version": "24.0.0",
+        "version": "24.0.1",
         "options": {
           "full_name": "dbeaver-community"
         }
