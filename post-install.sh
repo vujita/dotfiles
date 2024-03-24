@@ -22,13 +22,14 @@ else
 	echo "Already exists"
 fi
 chmod +x starship/starship-install.sh
-./starship/starship-install.sh --yes
+zsh starship/starship-install.sh --yes
 OS="$(uname)"
 echo "$OS detected"
 case $OS in
 'Linux')
 	echo "Linux"
     mv ~/.zshrc ~/.zshrc_tmp
+    chmod +x zap/zap-install.zsh
     zsh zap/zap-install.zsh --branch release-v1 --keep true
     mv ~/.zshrc_tmp ~/.zshrc
     curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | zsh
@@ -54,6 +55,8 @@ case $OS in
     curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
     tar xf lazygit.tar.gz lazygit
     sudo install lazygit /usr/local/bin
+    #zoxide
+    curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 	;;
 'FreeBSD')
 	echo "FreeBSD"
