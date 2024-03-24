@@ -22,7 +22,7 @@ else
 	echo "Already exists"
 fi
 chmod +x starship/starship-install.sh
-zsh starship/starship-install.sh --yes
+sh starship/starship-install.sh --yes
 OS="$(uname)"
 echo "$OS detected"
 case $OS in
@@ -56,7 +56,7 @@ case $OS in
     tar xf lazygit.tar.gz lazygit
     sudo install lazygit /usr/local/bin
     #zoxide
-    curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+    curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | zsh
 	;;
 'FreeBSD')
 	echo "FreeBSD"
