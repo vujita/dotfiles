@@ -74,9 +74,10 @@ codeSpaceCodeInstall(){
 }
 
 setMacMiniMirror(){
-  displayplacer "id:DBFDABEF-C8BC-A992-0D24-AC17895627FF+04C5D8B4-2B51-C661-8BB5-66089AB4BF23 res:1920x1080 hz:50 color_depth:4 enabled:true scaling:off origin:(0,0) degree:0"
+  displayplacer "id:4CA44572-DF57-DF94-6C15-530347D42B3B+04C5D8B4-2B51-C661-8BB5-66089AB4BF23 res:1920x1080 hz:60 color_depth:4 enabled:true scaling:off origin:(0,0) degree:
+0"
 }
 
 setMacMiniDualScreen(){
-  displayplacer "id:DBFDABEF-C8BC-A992-0D24-AC17895627FF res:3440x1440 hz:50 color_depth:4 enabled:true scaling:off origin:(0,0) degree:0" "id:04C5D8B4-2B51-C661-8BB5-66089AB4BF23 res:1920x1080 hz:60 color_depth:8 enabled:true scaling:off origin:(-1920,195) degree:0"
+  displayplacer "id:4CA44572-DF57-DF94-6C15-530347D42B3B res:3440x1440 hz:50 color_depth:4 enabled:true scaling:off origin:(0,0) degree:0" "id:04C5D8B4-2B51-C661-8BB5-66089AB4BF23 res:1920x1080 hz:60 color_depth:8 enabled:true scaling:off origin:(-1920,195) degree:0"
 }
