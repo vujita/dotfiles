@@ -45,14 +45,15 @@ dotfilesMod(){
   . ~/.zshrc
 }
 
-setRanchoSingleScreen(){
-  echo "setting 4k res for one monitor"
-  displayplacer "id:9E7175C0-6F8F-E022-FD74-A7B28230476E res:3840x2160 hz:60 color_depth:8 enabled:true scaling:off origin:(0,0) degree:0" "id:9E169C87-30EA-F74A-4723-30C626DF25E3 res:1792x1120 hz:59 color_depth:4 enabled:true scaling:on origin:(3840,868) degree:0"
+setRanchAllScreens(){
+  displayplacer "id:5360EEAA-FCB8-1393-5CBE-7B429CD2613D res:3840x2160 hz:60 color_depth:4 enabled:true scaling:off origin:(0,0) degree:0" "id:9E169C87-30EA-F74A-4723-30C626DF25E3 res:2304x1440 hz:59 color_depth:4 enabled:true scaling:off origin:(4166,2160) degree:0" "id:8B08E5D2-A7CC-8462-7A13-4907F1D60FA6 res:3840x2160 hz:60 color_depth:4 enabled:true scaling:off origin:(3840,0) degree:0"
 }
 
+setRanchoDualScreen(){
+  displayplacer "id:5360EEAA-FCB8-1393-5CBE-7B429CD2613D res:3840x2160 hz:60 color_depth:4 enabled:true scaling:off origin:(0,0) degree:0" "id:8B08E5D2-A7CC-8462-7A13-4907F1D60FA6 res:2560x1440 hz:60 color_depth:4 enabled:true scaling:off origin:(3840,0) degree:0"
+}
 setRanchoSingleShareScreen(){
-  echo "setting 2k res for better sharing"
-  displayplacer "id:9E7175C0-6F8F-E022-FD74-A7B28230476E res:2560x1440 hz:60 color_depth:4 enabled:true scaling:off origin:(0,0) degree:0" "id:9E169C87-30EA-F74A-4723-30C626DF25E3 res:1792x1120 hz:59 color_depth:4 enabled:true scaling:on origin:(2560,868) degree:0"
+  displayplacer "id:5360EEAA-FCB8-1393-5CBE-7B429CD2613D+8B08E5D2-A7CC-8462-7A13-4907F1D60FA6 res:3840x2160 hz:60 color_depth:4 enabled:true scaling:off origin:(0,0) degree:0"
 }
 
 setColbertOfficeScreen(){
