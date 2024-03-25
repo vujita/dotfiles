@@ -53,7 +53,7 @@ setRanchoDualScreen(){
   displayplacer "id:5360EEAA-FCB8-1393-5CBE-7B429CD2613D res:3840x2160 hz:60 color_depth:4 enabled:true scaling:off origin:(0,0) degree:0" "id:8B08E5D2-A7CC-8462-7A13-4907F1D60FA6 res:2560x1440 hz:60 color_depth:4 enabled:true scaling:off origin:(3840,0) degree:0"
 }
 setRanchoSingleShareScreen(){
-  displayplacer "id:5360EEAA-FCB8-1393-5CBE-7B429CD2613D+8B08E5D2-A7CC-8462-7A13-4907F1D60FA6 res:3840x2160 hz:60 color_depth:4 enabled:true scaling:off origin:(0,0) degree:0"
+  displayplacer "id:5360EEAA-FCB8-1393-5CBE-7B429CD2613D+8B08E5D2-A7CC-8462-7A13-4907F1D60FA6 res:2560x1440 hz:60 color_depth:4 enabled:true scaling:off origin:(0,0) degree:0"
 }
 
 setColbertOfficeScreen(){
