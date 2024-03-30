@@ -23,3 +23,14 @@ LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/re
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
+
+#zoxide
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | zsh
+
+# install zap
+mv ~/.zshrc ~/.zshrc_tmp
+chmod +x zap/zap-install.zsh
+zsh zap/zap-install.zsh --branch release-v1 --keep true
+mv ~/.zshrc_tmp ~/.zshrc
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | zsh
+./fonts/install.sh
