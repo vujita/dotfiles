@@ -34,3 +34,6 @@ zsh zap/zap-install.zsh --branch release-v1 --keep true
 mv ~/.zshrc_tmp ~/.zshrc
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | zsh
 ./fonts/install.sh
+
+chmod +x starship/starship-install.sh
+sh starship/starship-install.sh --yes
