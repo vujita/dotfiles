@@ -6,7 +6,7 @@ set -o allexport
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.zshrc-mac ] && source ~/.zshrc-mac
 
-export PATH="$HOME/.tmuxifier/bin:$PATH"
+export PATH="$HOME/.tmuxifier/bin:$PATH:$HOME/.local/bin"
 export set EDITOR=nvim
 export set CODE_DIRECTORY="${HOME}/code"
 
