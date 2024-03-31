@@ -19,6 +19,7 @@
     ~/.config/starship.toml: starship/starship.toml
     ~/.vimrc:
       path: vim/vimrc
+    ~/.pyenv: pyenv
     # MacOS/
     ~/.bashrc:
       path: bash/bashrc
