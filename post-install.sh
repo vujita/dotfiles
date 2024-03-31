@@ -28,6 +28,8 @@ echo "$OS detected"
 case $OS in
 'Linux')
 	echo "Linux"
+    #zoxide
+    curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | zsh
     mv ~/.zshrc ~/.zshrc_tmp
     chmod +x zap/zap-install.zsh
     zsh zap/zap-install.zsh --branch release-v1 --keep true
@@ -39,13 +41,16 @@ case $OS in
 		./nvim.appimage --appimage-extract
 		./squashfs-root/AppRun --version
 
+
 		# Optional: exposing nvim globally.
 		sudo mv squashfs-root /
 		sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
+    sudo apt-get update --yes
     sudo apt install -y gcc \
       g++ exa ripgrep \
       python3-pip xclip fd-find \
       vim tmux exa
+    sudo apt install -y python3.10-venv
 
     sudo pip3 install neovim
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -55,8 +60,6 @@ case $OS in
     curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
     tar xf lazygit.tar.gz lazygit
     sudo install lazygit /usr/local/bin
-    #zoxide
-    curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | zsh
 	;;
 'FreeBSD')
 	echo "FreeBSD"
