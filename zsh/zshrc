@@ -129,6 +129,7 @@ plug "andrewferrier/fzf-z"
 plug "felixr/docker-zsh-completion"
 plug "lukechilds/zsh-nvm"
 plug "lukechilds/zsh-better-npm-completion"
+plug "mattberther/zsh-pyenv"
 ## pyenv configs
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
