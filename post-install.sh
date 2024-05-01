@@ -86,6 +86,8 @@ case $OS in
 	brew bundle install
 	chmod +x brew-update-deps.sh
 	./brew-update-deps.sh
+  # setup copilot extension
+  gh extension install github/gh-copilot
 	;;
 'SunOS')
 	echo "SunOS"
