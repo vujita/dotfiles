@@ -129,14 +129,28 @@ plug "andrewferrier/fzf-z"
 plug "felixr/docker-zsh-completion"
 plug "lukechilds/zsh-nvm"
 plug "lukechilds/zsh-better-npm-completion"
-plug "mattberther/zsh-pyenv"
 ## pyenv configs
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+case "$OSTYPE" in
+  linux*)
+    export OS="linux";;
+  darwin*)
+    plug "mattberther/zsh-pyenv"
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    if command -v pyenv 1>/dev/null 2>&1; then
+      eval "$(pyenv init -)"
+    fi
+    export OS="mac";;
+  msys*)
+    export OS="windows";;
+  solaris*)
+    export OS="solaris";;
+  bsd*)
+    export OS="bsd";;
+  *)
+    export OS="unknown";;
+esac
 
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
 if command_exists gh; then
   eval "$(gh copilot alias -- zsh)"
 fi
