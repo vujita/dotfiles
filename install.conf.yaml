@@ -9,6 +9,7 @@
 - link:
     ~/.nvm: nvm
     ~/.fzf: fzf
+    ~/.tmux/plugins/tpm: tpm
     ~/.tmux.conf: tmux/tmux.conf
     ~/.gitconfig: git-config/gitconfig
     ~/.gitignore_global: git-config/gitignore_global
