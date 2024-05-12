@@ -1,7 +1,6 @@
 #!/bin/zsh
 autoload -Uz compinit
 compinit
-eval "$(zoxide init zsh)"
 mkdir -p ~/.nvm
 export NVM_DIR=~/.nvm
 set -o allexport
