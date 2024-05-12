@@ -1,5 +1,4 @@
 #!/bin/zsh
-eval "$(zoxide init zsh)"
 mkdir -p ~/.nvm
 export NVM_DIR=~/.nvm
 set -o allexport
@@ -154,3 +153,5 @@ esac
 if command_exists gh; then
   eval "$(gh copilot alias -- zsh)"
 fi
+
+eval "$(zoxide init zsh)"
