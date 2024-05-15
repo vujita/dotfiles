@@ -1,5 +1,13 @@
 return {
   {
+    "f-person/git-blame.nvim",
+    config = function()
+      require("gitblame").setup({
+        enabled = true,
+      })
+    end,
+  },
+  {
     "FabijanZulj/blame.nvim",
     keys = {
       {
@@ -9,7 +17,7 @@ return {
       },
     },
     config = function()
-      require("blame").setup()
+      require("blame").setup({})
     end,
   },
 }
