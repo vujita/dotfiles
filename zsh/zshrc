@@ -61,7 +61,6 @@ alias so="source ~/.zshrc"
 alias vim="nvim"
 alias vi="nvim"
 alias oldvim="vim"
-alias ll="exa -lar --icons"
 
 
 export NVM_DIR="$HOME/.nvm"
@@ -153,7 +152,7 @@ case "$OSTYPE" in
 esac
 
 if command_exists gh; then
-  eval "$(gh copilot alias -- zsh)"
+  # eval "$(gh copilot alias -- zsh)"
 fi
 if command_exists xrun; then
   eval "$(xrun --completion=zsh)"
