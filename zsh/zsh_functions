@@ -45,6 +45,14 @@ dotfilesMod(){
   . ~/.zshrc
 }
 
+set13macbookPro2500(){
+  displayplacer "id:E5E926FF-FF83-8251-E163-D61F52FAA3E5 res:2560x1600 color_depth:4 enabled:true scaling:off origin:(0,0) degree:0"
+}
+
+set13macbookPro2048(){
+  displayplacer "id:E5E926FF-FF83-8251-E163-D61F52FAA3E5 res:2048x1280 color_depth:4 enabled:true scaling:off origin:(0,0) degree:0"
+}
+
 setRanchAllScreens(){
   displayplacer "id:5360EEAA-FCB8-1393-5CBE-7B429CD2613D res:3840x2160 hz:60 color_depth:4 enabled:true scaling:off origin:(0,0) degree:0" "id:9E169C87-30EA-F74A-4723-30C626DF25E3 res:2304x1440 hz:59 color_depth:4 enabled:true scaling:off origin:(4166,2160) degree:0" "id:8B08E5D2-A7CC-8462-7A13-4907F1D60FA6 res:3840x2160 hz:60 color_depth:4 enabled:true scaling:off origin:(3840,0) degree:0"
 }
