@@ -2,7 +2,7 @@ return {
   "zbirenbaum/copilot.lua",
   cmd = "Copilot",
   build = ":Copilot auth",
-
+  enabled = false,
   keys = {
     {
       "<leader>coe",
@@ -12,7 +12,7 @@ return {
     {
       "<leader>cod",
       "<cmd>Copilot disable<cr>",
-      desc = "Copilot Enable",
+      desc = "Copilot disable",
     },
   },
   opts = {
