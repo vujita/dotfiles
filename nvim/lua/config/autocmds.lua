@@ -3,7 +3,14 @@
 -- Add any additional autocmds here
 
 -- Remove trailing whitespace on save
--- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
---   pattern = "*",
---   command = [[%s/\s\+$//e]],
--- })
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = "*",
+  command = [[%s/\s\+$//e]],
+})
+
+vim.api.nevim_create_autocmd({ "BufWritePost" }, {
+  pattern = "*.ts,*.tsx,*.js,*.jsx",
+  callback = function()
+    vim.api.nvim_command("FormatWrite")
+  end,
+})
