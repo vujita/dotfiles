@@ -8,9 +8,9 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   command = [[%s/\s\+$//e]],
 })
 
-vim.api.nevim_create_autocmd({ "BufWritePost" }, {
-  pattern = "*.ts,*.tsx,*.js,*.jsx",
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+  pattern = "*.ts,*.tsx,*.js,*.jsx,*.lua",
   callback = function()
-    vim.api.nvim_command("FormatWrite")
+    require("lint").try_lint()
   end,
 })
