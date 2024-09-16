@@ -2,7 +2,7 @@ return {
   "zbirenbaum/copilot.lua",
   cmd = "Copilot",
   build = ":Copilot auth",
-  enabled = false,
+  enabled = true,
   keys = {
     {
       "<leader>coe",
@@ -19,6 +19,10 @@ return {
     suggestion = { enabled = false },
     panel = { enabled = false },
     filetypes = {
+      javascript = true,
+      javascriptreact = true,
+      typescript = true,
+      typescriptreact = true,
       markdown = true,
       help = true,
     },
