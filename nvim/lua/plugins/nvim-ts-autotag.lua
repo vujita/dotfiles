@@ -15,6 +15,18 @@ return {
         ["html"] = {
           enable_close = false,
         },
+        ["javascript"] = {
+          enable_close = false,
+        },
+        ["javascriptreact"] = {
+          enable_close = false,
+        },
+        ["typescript"] = {
+          enable_close = false,
+        },
+        ["typescriptreact"] = {
+          enable_close = false,
+        },
       },
     })
   end,
