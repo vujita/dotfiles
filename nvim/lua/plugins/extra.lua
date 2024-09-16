@@ -16,7 +16,7 @@ return {
   { import = "lazyvim.plugins.extras.lsp.none-ls" },
   { import = "lazyvim.plugins.extras.coding.yanky" },
   { import = "lazyvim.plugins.extras.editor.telescope" },
-  -- { import = "lazyvim.plugins.extras.editor.fzf" },
+  { import = "lazyvim.plugins.extras.editor.fzf" },
   { import = "lazyvim.plugins.extras.editor.refactoring" },
   { import = "lazyvim.plugins.extras.editor.illuminate" },
   { import = "lazyvim.plugins.extras.coding.neogen" },

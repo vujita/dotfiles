@@ -13,19 +13,19 @@ return {
       -- doesn't work well in a specific filetype
       per_filetype = {
         ["html"] = {
-          enable_close = false,
+          enable_close = true,
         },
         ["javascript"] = {
-          enable_close = false,
+          enable_close = true,
         },
         ["javascriptreact"] = {
-          enable_close = false,
+          enable_close = true,
         },
         ["typescript"] = {
-          enable_close = false,
+          enable_close = true,
         },
         ["typescriptreact"] = {
-          enable_close = false,
+          enable_close = true,
         },
       },
     })

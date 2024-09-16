@@ -1,3 +1,3 @@
 return {
-  { "prisma/vim-prisma" },
+  { "prisma/vim-prisma", enabled = false },
 }
