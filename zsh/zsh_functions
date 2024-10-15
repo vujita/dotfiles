@@ -37,7 +37,8 @@ pnpmReinstall(){
 
 gfr(){
   eval "gfa"
-  gpr
+  eval "gpr"
+  git prune && git prune-packed && git gc
 }
 
 dotfilesMod(){
