@@ -1,5 +1,2 @@
-# commands for OS X go here
-eval "$(gh completion -s zsh)"
-eval "$(pyenv init -)"
-alias ls="eza --icons"
-alias ll="eza -lar --icons"
+export PATH=/opt/homebrew/bin:$PATH
+

@@ -8,6 +8,9 @@ set -o allexport
 [ -f ~/.zshrc-mac ] && source ~/.zshrc-mac
 
 export PATH="$HOME/.tmuxifier/bin:$PATH:$HOME/.local/bin"
+export PATH=/opt/homebrew/bin:$PATH
+
+
 export set EDITOR=nvim
 export set CODE_DIRECTORY="${HOME}/code"
 
