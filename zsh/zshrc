@@ -165,3 +165,10 @@ if command_exists av; then
 
   source <(av completion zsh)
 fi
+
+# bun completions
+[ -s "/Users/vnguyen/.bun/_bun" ] && source "/Users/vnguyen/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

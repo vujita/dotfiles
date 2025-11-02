@@ -90,6 +90,7 @@ case $OS in
 	./brew-update-deps.sh
   # setup copilot extension
   gh extension install github/gh-copilot
+  curl -fsSL https://bun.com/install | bash
 	;;
 'SunOS')
 	echo "SunOS"
