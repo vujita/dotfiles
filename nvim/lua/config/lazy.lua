@@ -14,7 +14,7 @@ require("lazy").setup({
       import = "lazyvim.plugins",
     },
     {
-      "williamboman/mason.nvim",
+      "mason-org/mason.nvim",
       opts = function(_, opts)
         -- table.insert(opts.ensure_installed, "typescript-language-server")
         table.insert(opts.ensure_installed, "css-variables-language-server")
