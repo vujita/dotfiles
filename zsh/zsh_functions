@@ -82,15 +82,14 @@ codeSpaceCodeInstall(){
   sh /workspaces/.codespaces/.persistedshare/dotfiles/post-install.sh
 }
 
-setMacMiniMirror(){
-  displayplacer "id:4CA44572-DF57-DF94-6C15-530347D42B3B+04C5D8B4-2B51-C661-8BB5-66089AB4BF23 res:1920x1080 hz:60 color_depth:4 enabled:true scaling:off origin:(0,0) degree:
-0"
+setMacMiniTv(){
+  displayplacer "id:07E2E9C0-9326-7937-4CFD-0D6E5D65901E res:1920x1080 hz:60 color_depth:4 enabled:true scaling:off origin:(0,0) degree:0"
 }
+# I just ended up paying for whipser flow
+# startWhisper () {
+# 	docker run -d -p 4444:4444 --name whisper-assistant martinopensky/whisper-assistant:latest
+# }
 
-setMacMiniDualScreen(){
-  displayplacer "id:4CA44572-DF57-DF94-6C15-530347D42B3B res:3440x1440 hz:50 color_depth:4 enabled:true scaling:off origin:(0,0) degree:0" "id:04C5D8B4-2B51-C661-8BB5-66089AB4BF23 res:1920x1080 hz:60 color_depth:8 enabled:true scaling:off origin:(-1920,195) degree:0"
-}
-
-startWhisper () {
-	docker run -d -p 4444:4444 --name whisper-assistant martinopensky/whisper-assistant:latest
+avs(){
+  av sync --push=yes --prune=yes --rebase-to-trunk
 }
