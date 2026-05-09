@@ -157,9 +157,6 @@ esac
 if command_exists gh; then
   # eval "$(gh copilot alias -- zsh)"
 fi
-if command_exists xrun; then
-  eval "$(xrun --completion=zsh)"
-fi
 eval "$(zoxide init zsh)"
 if command_exists av; then
 
