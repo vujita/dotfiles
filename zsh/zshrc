@@ -78,7 +78,12 @@ command_exists () {
 }
 function auto_load_xrun(){
   if command_exists xrun; then
-    eval "$(xrun --completion=zsh)"
+    _xrun_completion() {
+      local tasks
+      tasks=$(xrun 2>/dev/null | grep -E '^\s+\w' | awk '{print $1}')
+      compadd ${(f)tasks}
+    }
+    compdef _xrun_completion xrun
   fi
 }
 auto_load_xrun
