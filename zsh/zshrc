@@ -61,6 +61,7 @@ export NVM_NO_USE=true
 eval "$(starship init zsh)"
 
 alias so="source ~/.zshrc"
+alias listMyPrs="gh pr list --author @me --state open"
 alias vim="nvim"
 alias vi="nvim"
 alias oldvim="vim"
