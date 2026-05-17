@@ -5,3 +5,19 @@ quick-terminal-animation-duration = 0.2
 quick-terminal-autohide = true
 shell-integration = zsh
 command = /usr/bin/zsh -l -i
+
+# Linux window
+gtk-titlebar = false
+
+# Appearance
+background-opacity = 0.95
+font-family = JetBrainsMono Nerd Font
+font-size = 13
+window-padding-x = 8
+window-padding-y = 8
+
+# Behavior
+copy-on-select = clipboard
+mouse-hide-while-typing = true
+confirm-close-surface = false
+resize-overlay = never

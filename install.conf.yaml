@@ -23,6 +23,10 @@
     ~/.vimrc:
       path: vim/vimrc
     ~/.pyenv: pyenv
+    # Linux
+    ~/.local/bin/ghostty-toggle.sh:
+      path: ghostty/ghostty-toggle.sh
+      if: "[ `uname` = Linux ]"
     # MacOS/
     ~/.bashrc:
       path: bash/bashrc
