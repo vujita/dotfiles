@@ -3,3 +3,5 @@ quick-terminal-position = top
 quick-terminal-screen = main
 quick-terminal-animation-duration = 0.2
 quick-terminal-autohide = true
+shell-integration = zsh
+command = /usr/bin/zsh -l -i
