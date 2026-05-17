@@ -203,3 +203,6 @@ if type compdef &>/dev/null; then
 fi
 ###-end-pnpm-completion-###
 
+
+# opencode
+export PATH=$HOME/.opencode/bin:$PATH

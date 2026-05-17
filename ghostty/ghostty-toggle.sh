@@ -14,6 +14,8 @@ else
     fi
     if [ -z "$WINDOW" ]; then
         ghostty &
+        WINDOW=$(xdotool search --sync --class "ghostty" 2>/dev/null | tail -1)
+        wmctrl -ir $(printf '0x%x' "$WINDOW") -b add,maximized_vert,maximized_horz
     else
         xdotool windowmap "$WINDOW" 2>/dev/null
         xdotool windowactivate --sync "$WINDOW"
