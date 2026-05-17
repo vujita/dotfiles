@@ -24,6 +24,9 @@
       path: vim/vimrc
     ~/.pyenv: pyenv
     # Linux
+    ~/.config/autostart/ghostty.desktop:
+      path: ghostty/ghostty.desktop
+      if: "[ `uname` = Linux ]"
     ~/.local/bin/ghostty-toggle.sh:
       path: ghostty/ghostty-toggle.sh
       if: "[ `uname` = Linux ]"
