@@ -8,7 +8,7 @@ fzf/install --all
 nvm/install.sh
 echo "Install node and source nvm"
 source ~/.zshrc
-NVM_DEFAULT_VERSION=18.6.0
+NVM_DEFAULT_VERSION=25.1.0
 
 nvm install $NVM_DEFAULT_VERSION
 nvm alias default $NVM_DEFAULT_VERSION
