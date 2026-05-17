@@ -21,6 +21,7 @@ if [ ! -d $TPM_FOLDER ]; then
 else
 	echo "Already exists"
 fi
+$TPM_FOLDER/bin/install_plugins
 chmod +x starship/starship-install.sh
 sh starship/starship-install.sh --yes
 OS="$(uname)"
@@ -47,10 +48,10 @@ case $OS in
 		sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
     sudo apt-get update --yes
     sudo apt install -y gcc \
-      g++ exa ripgrep \
+      g++ eza ripgrep \
       python3-pip xclip fd-find \
-      vim tmux exa
-    sudo apt install -y python3.10-venv
+      vim tmux
+    sudo apt install -y python3-venv
 
     sudo pip3 install neovim
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
