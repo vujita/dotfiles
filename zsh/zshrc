@@ -140,7 +140,9 @@ plug "lukechilds/zsh-better-npm-completion"
 ## pyenv configs
 case "$OSTYPE" in
   linux*)
-    export OS="linux";;
+    export OS="linux"
+    [[ "$XDG_SESSION_TYPE" == "x11" ]] && command_exists setxkbmap && setxkbmap -option caps:swapescape
+    ;;
   darwin*)
     plug "mattberther/zsh-pyenv"
     export PYENV_ROOT="$HOME/.pyenv"
