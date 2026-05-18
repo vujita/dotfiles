@@ -91,7 +91,7 @@ setMacMiniTv(){
 # }
 
 avs(){
-  av sync --push=yes --prune=yes --rebase-to-trunk
+  av sync --push=yes --prune=yes --rebase-to-trunk --all
 }
 ll(){
   ls -larth
