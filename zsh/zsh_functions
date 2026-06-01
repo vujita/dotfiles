@@ -96,3 +96,11 @@ avs(){
 ll(){
   ls -larth
 }
+
+# homelab stuff
+
+sshOptiplex1(){
+  tailscale up
+  tailscale status
+  ssh root@optiplex
+}
