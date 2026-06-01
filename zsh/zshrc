@@ -22,6 +22,7 @@ else
 fi
 
 export set NOTES_DIR="${CODE_DIRECTORY}/notes"
+export PATH="$DOTFILES_DIR/bin:$PATH"
 [ -f ~/.env ] && source ~/.env
 
 
