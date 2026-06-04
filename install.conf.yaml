@@ -19,6 +19,16 @@
       path: nvim
     ~/.config/ghostty:
       path: ghostty
+    ~/.config/ghostty/config-os:
+      path: ghostty/config-darwin
+      if: "[ `uname` = Darwin ]"
+
+- link:
+    ~/.config/ghostty/config-os:
+      path: ghostty/config-linux
+      if: "[ `uname` = Linux ]"
+
+- link:
     ~/.config/starship.toml: starship/starship.toml
     ~/.vimrc:
       path: vim/vimrc

@@ -1,0 +1,2 @@
+gtk-titlebar = true
+command = /bin/zsh -l -i

@@ -1,13 +1,10 @@
 # Quick terminal (Guake-style dropdown)
 quick-terminal-position = top
 quick-terminal-screen = main
+quick-terminal-size = 100%
 quick-terminal-animation-duration = 0.2
 quick-terminal-autohide = true
 shell-integration = zsh
-command = /usr/bin/zsh -l -i
-
-# Linux window
-gtk-titlebar = true
 
 # Appearance
 background-opacity = 0.95
@@ -21,3 +18,6 @@ copy-on-select = clipboard
 mouse-hide-while-typing = true
 confirm-close-surface = false
 resize-overlay = never
+
+# OS-specific overrides
+config-file = ~/.config/ghostty/config-os
