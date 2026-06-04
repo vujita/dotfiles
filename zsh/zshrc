@@ -210,3 +210,6 @@ fi
 
 # opencode
 export PATH=$HOME/.opencode/bin:$PATH
+
+# Added by LM Studio CLI tool (lms)
+export PATH="$PATH:$HOME/.lmstudio/bin"

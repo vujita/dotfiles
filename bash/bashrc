@@ -2,3 +2,6 @@ export NVM_DIR=~/.nvm
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export PATH=/opt/homebrew/bin:$PATH
+
+# Added by LM Studio CLI tool (lms)
+export PATH="$PATH:$HOME/.lmstudio/bin"

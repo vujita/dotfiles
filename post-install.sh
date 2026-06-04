@@ -92,6 +92,9 @@ case $OS in
   # setup copilot extension
   gh extension install github/gh-copilot
   curl -fsSL https://bun.com/install | bash
+  if ! command_exists lms; then
+    curl -fsSL https://lmstudio.ai/install.sh | bash
+  fi
 	;;
 'SunOS')
 	echo "SunOS"
