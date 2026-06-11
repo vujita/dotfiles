@@ -54,7 +54,7 @@ require("lazy").setup({
     --   "mfussenegger/nvim-lint",
     --   depends = {
     --     {
-    --       "williamboman/mason.nvim",
+    --       "mason-org/mason.nvim",
     --       "rshkarin/mason-nvim-lint",
     --     },
     --   },
