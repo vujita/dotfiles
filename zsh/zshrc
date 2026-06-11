@@ -66,6 +66,7 @@ alias listMyPrs="gh pr list --author @me --state open"
 alias vim="nvim"
 alias vi="nvim"
 alias oldvim="vim"
+alias claude-auto="claude --permission-mode auto"
 
 
 export NVM_DIR="$HOME/.nvm"
