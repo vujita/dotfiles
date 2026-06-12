@@ -169,8 +169,9 @@ if command_exists gh; then
 fi
 eval "$(zoxide init zsh)"
 if command_exists av; then
-
-  source <(av completion zsh)
+  # fix some broken freezing
+  av completion zsh > ~/.cache/av/zsh-completion.zsh   # write to file
+  source ~/.cache/av/zsh-completion.zsh
 fi
 
 # bun completions
