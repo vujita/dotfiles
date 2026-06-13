@@ -86,9 +86,18 @@ case $OS in
   else
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
-	brew bundle install
-	chmod +x brew-update-deps.sh
-	./brew-update-deps.sh
+  brew bundle install
+  chmod +x brew-update-deps.sh
+  ./brew-update-deps.sh
+  # Ghostty quick terminal:
+  # - config-darwin uses `global:option+space=toggle_quick_terminal`; `option`
+  #   matters on macOS even though Ghostty prints it back as `alt`.
+  # - Ghostty must be enabled in System Settings -> Privacy & Security ->
+  #   Accessibility so the global shortcut works when another app is focused.
+  # - This helper is not used by Ghostty's native keybind, but keep it executable
+  #   for manual testing or if we later bind the shortcut through another tool.
+  chmod +x ghostty/ghostty-toggle-macos.sh
+  echo "Ghostty quick terminal helper installed at ~/.local/bin/ghostty-toggle-macos.sh"
   # setup copilot extension
   gh extension install github/gh-copilot
   curl -fsSL https://bun.com/install | bash

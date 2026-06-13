@@ -1,3 +1,3 @@
 command = /bin/zsh -l -i
-keybind = global:alt+space=toggle_quick_terminal
+keybind = global:option+space=toggle_quick_terminal
 quit-after-last-window-closed = false

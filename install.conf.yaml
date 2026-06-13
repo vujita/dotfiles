@@ -41,6 +41,9 @@
       path: ghostty/ghostty-toggle.sh
       if: "[ `uname` = Linux ]"
     # MacOS/
+    ~/.local/bin/ghostty-toggle-macos.sh:
+      path: ghostty/ghostty-toggle-macos.sh
+      if: "[ `uname` = Darwin ]"
     ~/.bashrc:
       path: bash/bashrc
       if: "[ `uname` = Darwin ]"
