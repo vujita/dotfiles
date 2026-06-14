@@ -93,6 +93,10 @@ getCurrentDisplaySettings(){
 # 	docker run -d -p 4444:4444 --name whisper-assistant martinopensky/whisper-assistant:latest
 # }
 
+gh-automerge(){
+  gh pr merge --auto --squash "$@"
+}
+
 avs(){
   av sync --push=yes --prune=yes --rebase-to-trunk --all
 }
