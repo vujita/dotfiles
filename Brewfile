@@ -1,9 +1,7 @@
 tap "anomalyco/tap"
-tap "aviator-co/tap"
+tap "aviator-co/tap", trusted: true
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-tap "homebrew/services"
-tap "jakehilborn/jakehilborn", trusted: true
+tap "jakehilborn/jakehilborn"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
 # C library implementing the SSH2 protocol
@@ -24,6 +22,8 @@ brew "gmp"
 brew "coreutils"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# Utility to configure multi-display resolutions and arrangements
+brew "displayplacer"
 # Modern, maintained replacement for ls
 brew "eza"
 # Simple, fast and user-friendly alternative to find
@@ -102,8 +102,7 @@ brew "wget"
 brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
-# macOS command line utility to configure multi-display resolutions and arrangements. Essentially XRandR for macOS.
-brew "jakehilborn/jakehilborn/displayplacer"
+brew "aviator-co/tap/av"
 # Web browser focusing on privacy
 cask "brave-browser"
 # Terminal-based AI coding assistant
@@ -260,5 +259,3 @@ vscode "vercel.turbo-vsc"
 vscode "wakatime.vscode-wakatime"
 vscode "wix.vscode-import-cost"
 vscode "yoavbls.pretty-ts-errors"
-npm "@xarc/run"
-npm "corepack"
