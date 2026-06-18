@@ -15,6 +15,7 @@ local function pick_pane_and_send(text)
     end
     local target = selected:match("^(%S+)")
     vim.fn.system({ "tmux", "send-keys", "-t", target, "-l", text })
+    vim.fn.system({ "tmux", "send-keys", "-t", target, "Enter" })
   end)
 end
 
