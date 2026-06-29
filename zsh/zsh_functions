@@ -109,6 +109,15 @@ ll(){
   ls -larth
 }
 
+dockerRmVolumes(){
+  volumes=$(docker volume ls -q)
+  if [ -z "$volumes" ]; then
+    echo "No docker volumes to remove."
+    return 0
+  fi
+  echo "$volumes" | xargs docker volume rm
+}
+
 # homelab stuff
 
 sshOptiplex1(){
