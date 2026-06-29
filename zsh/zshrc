@@ -68,6 +68,14 @@ alias vi="nvim"
 alias oldvim="vim"
 alias claude-auto="claude --permission-mode auto"
 
+claude-rc-auto(){
+  local name="${1:-}"
+  if [[ -n "$name" ]]; then
+    claude --permission-mode auto --remote-control --name "$name"
+  else
+    claude --permission-mode auto --remote-control
+  fi
+}
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
