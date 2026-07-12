@@ -24,6 +24,14 @@ fi
 $TPM_FOLDER/bin/install_plugins
 chmod +x starship/starship-install.sh
 sh starship/starship-install.sh --yes
+
+if command_exists rustup ; then
+  echo "rustup already installed"
+else
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain stable --profile default
+  source "$HOME/.cargo/env"
+fi
+
 OS="$(uname)"
 echo "$OS detected"
 case $OS in

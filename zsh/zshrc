@@ -152,7 +152,7 @@ plug "lukechilds/zsh-better-npm-completion"
 case "$OSTYPE" in
   linux*)
     export OS="linux"
-    [[ "$XDG_SESSION_TYPE" == "x11" ]] && command_exists setxkbmap && setxkbmap -option caps:swapescape
+    [[ "$XDG_SESSION_TYPE" == "x11" ]] && command_exists setxkbmap && setxkbmap -option caps:escape
     ;;
   darwin*)
     plug "mattberther/zsh-pyenv"
@@ -223,3 +223,10 @@ export PATH=$HOME/.opencode/bin:$PATH
 
 # Added by LM Studio CLI tool (lms)
 export PATH="$PATH:$HOME/.lmstudio/bin"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/vu/.local/bin:$PATH"
+
+# Rust (rustup/cargo)
+export PATH="$HOME/.cargo/bin:$PATH"
