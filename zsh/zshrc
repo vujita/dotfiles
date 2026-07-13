@@ -224,9 +224,8 @@ export PATH=$HOME/.opencode/bin:$PATH
 # Added by LM Studio CLI tool (lms)
 export PATH="$PATH:$HOME/.lmstudio/bin"
 
-
 # Added by Antigravity CLI installer
-export PATH="/home/vu/.local/bin:$PATH"
 
 # Rust (rustup/cargo)
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"

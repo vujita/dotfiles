@@ -24,6 +24,8 @@ brew "coreutils"
 brew "curl"
 # Utility to configure multi-display resolutions and arrangements
 brew "displayplacer"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
 # Modern, maintained replacement for ls
 brew "eza"
 # Simple, fast and user-friendly alternative to find
