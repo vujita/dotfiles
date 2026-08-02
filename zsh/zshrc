@@ -229,3 +229,17 @@ export PATH="$PATH:$HOME/.lmstudio/bin"
 # Rust (rustup/cargo)
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+
+# >>> fireconnect >>>
+export FIREWORKS_API_KEY="$($HOME/.local/bin/fireconnect --home /Users/vnguyen key export --stored-only 2>/dev/null)"
+if [ -z "${FIREWORKS_API_KEY:-}" ] && [ -t 2 ]; then
+  echo 'fireconnect: FIREWORKS_API_KEY is empty — run `fireconnect status` to check your key storage.' >&2
+fi
+# <<< fireconnect <<<
+
+
+# Added by Antigravity CLI installer
+export PATH="$HOME/.local/bin:$PATH"
+
+# Added by Antigravity IDE
+export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
