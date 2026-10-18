@@ -1,11 +1,12 @@
+tap "alexsjones/llmfit", "https://github.com/AlexsJones/homebrew-llmfit"
 tap "anomalyco/tap"
 tap "aviator-co/tap", trusted: true
+tap "can1357/tap"
 tap "homebrew/bundle"
 tap "jakehilborn/jakehilborn"
+tap "rjyo/moshi"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
-# C library implementing the SSH2 protocol
-brew "libssh2", link: false
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Core application library for C
@@ -46,6 +47,8 @@ brew "git-delta"
 brew "tcl-tk"
 # Tcl/Tk UI for the git revision control system
 brew "git-gui"
+# Cinematic Git commit replay tool
+brew "gitlogue"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
 # GNU Transport Layer Security (TLS) Library
@@ -54,6 +57,12 @@ brew "gnutls"
 brew "gnupg"
 # OpenType text shaping engine
 brew "harfbuzz"
+# Agent multiplexer that lives in your terminal
+brew "herdr"
+# Library to communicate with iOS devices natively
+brew "libimobiledevice"
+# DevTools proxy for iOS devices
+brew "ios-webkit-debug-proxy"
 # Interactive computing in Python
 brew "ipython"
 # Lightweight and flexible command-line JSON processor
@@ -64,6 +73,10 @@ brew "lazydocker"
 brew "lazygit"
 # YAML Parser
 brew "libyaml", link: false
+# Next-gen compiler infrastructure
+brew "llvm"
+# Minimalist GNU for Windows and GCC cross-compilers
+brew "mingw-w64"
 # Simple tool to make locally trusted development certificates
 brew "mkcert"
 # Remote terminal application
@@ -102,13 +115,29 @@ brew "tldr"
 brew "tmux"
 # Internet file retriever
 brew "wget"
+# CLI for Git worktree management, designed for parallel AI agent workflows
+brew "worktrunk"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Terminal tool that right-sizes LLM models to your system hardware
+brew "alexsjones/llmfit/llmfit", trusted: true
+# The AI coding agent built for the terminal.
+brew "anomalyco/tap/opencode", trusted: true
 brew "aviator-co/tap/av"
+# Coding agent with the IDE wired in
+brew "can1357/tap/omp", trusted: true
+# Portable daemon + CLI that bridges AI coding agents to the Moshi mobile app
+brew "rjyo/moshi/moshi-hook", trusted: true
+# Android SDK component
+cask "android-platform-tools"
+# 3D creation suite
+cask "blender"
 # Web browser focusing on privacy
 cask "brave-browser"
+# Utility that prevents the system from going to sleep
+cask "caffeine"
 # Terminal-based AI coding assistant
 cask "claude-code"
 # OpenAI's coding agent that runs in your terminal
@@ -119,7 +148,6 @@ cask "datagrip"
 cask "dbeaver-community"
 # App to build and share containerised applications and microservices
 cask "docker-desktop"
-# Reimagine your terminal
 cask "fig"
 # Collaborative team software
 cask "figma"
@@ -203,6 +231,8 @@ cask "raycast"
 cask "rubymine"
 # Team communication and collaboration software
 cask "slack"
+# Remote control for your computer
+cask "sofa-server"
 # Open-source code editor
 cask "visual-studio-code"
 # Rust-based terminal
@@ -224,8 +254,6 @@ vscode "esbenp.prettier-vscode"
 vscode "firsttris.vscode-jest-runner"
 vscode "formulahendry.auto-rename-tag"
 vscode "github.codespaces"
-vscode "github.copilot"
-vscode "github.copilot-chat"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
 vscode "heybourn.headwind"
@@ -263,3 +291,8 @@ vscode "vercel.turbo-vsc"
 vscode "wakatime.vscode-wakatime"
 vscode "wix.vscode-import-cost"
 vscode "yoavbls.pretty-ts-errors"
+cargo "cargo-xwin"
+cargo "tauri-driver"
+npm "@earendil-works/pi-coding-agent"
+npm "@xarc/run"
+npm "pnpm"
