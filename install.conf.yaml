@@ -50,6 +50,9 @@
     ~/.zshrc-mac:
       path: zsh/zshrc-mac
       if: "[ `uname` = Darwin ]"
+    ~/.omp/agent/models.json: ai/models.json
+    ~/.pi/agent/models.json: ai/models.json
+    ~/.omp/agent/models.yml: ai/models.json
 
 - create:
     # - ~/downloads

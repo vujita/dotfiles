@@ -22,8 +22,12 @@ else
 	echo "Already exists"
 fi
 $TPM_FOLDER/bin/install_plugins
-chmod +x starship/starship-install.sh
-sh starship/starship-install.sh --yes
+if command_exists starship ; then
+  echo "starship already installed"
+else
+  chmod +x starship/starship-install.sh
+  sh starship/starship-install.sh --yes
+fi
 
 if command_exists rustup ; then
   echo "rustup already installed"

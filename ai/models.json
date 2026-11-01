@@ -1,0 +1,16 @@
+{
+  "$schema": "https://pi.dev/schemas/models.schema.json",
+  "providers": {
+    "lmstudio": {
+      "baseUrl": "http://127.0.0.1:1234/v1",
+      "api": "openai-completions",
+      "apiKey": "local-no-key-required",
+      "models": [
+        {
+          "id": "qwen2.5-coder-32b",
+          "name": "Qwen 2.5 Coder 32B"
+        }
+      ]
+    }
+  }
+}

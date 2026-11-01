@@ -77,6 +77,23 @@ claude-rc-auto(){
   fi
 }
 
+# AI coding agents (local models via LM Studio on port 1234)
+alias omp-local="omp --model lmstudio/qwen2.5-coder-32b"
+alias pi-local="pi --model lmstudio/qwen2.5-coder-32b"
+alias opencode-local="opencode -m lmstudio/qwen2.5-coder-32b"
+alias oc-local="opencode -m lmstudio/qwen2.5-coder-32b"
+
+# AI coding agents (Fireworks AI cloud models via $FIREWORKS_API_KEY)
+alias omp-fw="omp --model fireworks/glm-5.3-flash"
+alias pi-fw="pi --provider fireworks --model accounts/fireworks/routers/glm-fast-latest"
+alias opencode-fw="opencode -m fireworks-ai/accounts/fireworks/routers/glm-fast-latest"
+alias oc-fw="opencode -m fireworks-ai/accounts/fireworks/routers/glm-fast-latest"
+
+# LM Studio server controls
+alias lms-up="lms server start && lms load qwen/qwen2.5-coder-32b -y --gpu max --parallel 1 -c 16384 --identifier qwen2.5-coder-32b"
+alias lms-down="lms server stop"
+alias lms-status="lms status"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion

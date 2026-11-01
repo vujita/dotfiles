@@ -35,5 +35,9 @@ mv ~/.zshrc_tmp ~/.zshrc
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | zsh
 ./fonts/install.sh
 
-chmod +x starship/starship-install.sh
-sh starship/starship-install.sh --yes
+if command -v starship >/dev/null 2>&1; then
+  echo "starship already installed"
+else
+  chmod +x starship/starship-install.sh
+  sh starship/starship-install.sh --yes
+fi
