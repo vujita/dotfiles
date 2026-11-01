@@ -125,3 +125,7 @@ sshOptiplex1(){
   tailscale status
   ssh root@optiplex
 }
+
+t3Connect(){
+  npx t3 connect
+}
