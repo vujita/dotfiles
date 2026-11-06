@@ -129,3 +129,33 @@ sshOptiplex1(){
 t3Connect(){
   npx t3 connect
 }
+
+# wt switch, then move this tmux window's other panes in the same repo along.
+# Only idle shells are moved: keys sent to nvim, lazygit, etc. would reach the app.
+wts(){
+  wt switch "$@" || return
+  [[ -n $TMUX ]] || return 0
+
+  local repo id cmd in_mode dir
+  repo=$(git rev-parse --path-format=absolute --git-common-dir 2>/dev/null) || return 0
+
+  tmux list-panes -t "$TMUX_PANE" -F $'#{pane_id}\t#{pane_current_command}\t#{pane_in_mode}\t#{pane_current_path}' |
+    while IFS=$'\t' read -r id cmd in_mode dir; do
+      [[ $id == $TMUX_PANE || $dir == $PWD ]] && continue
+      # The pane's worktree may have been removed: check its nearest surviving parent.
+      while [[ $dir == /?* && ! -d $dir ]]; do dir=${dir:h}; done
+      [[ $(git -C "$dir" rev-parse --path-format=absolute --git-common-dir 2>/dev/null) == $repo ]] || continue
+
+      if [[ $cmd != (zsh|bash|sh|fish) ]]; then
+        print -r -- "wts: skipped pane $id (running $cmd)"
+      elif (( in_mode )); then
+        print -r -- "wts: skipped pane $id (in copy mode)"
+      else
+        # C-c clears any half-typed input whatever the keymap or cursor position.
+        tmux send-keys -t "$id" C-c
+        sleep 0.1
+        tmux send-keys -t "$id" -l -- "cd -- ${(q)PWD}"
+        tmux send-keys -t "$id" Enter
+      fi
+    done
+}
